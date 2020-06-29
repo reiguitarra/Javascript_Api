@@ -1,0 +1,42 @@
+[
+  {
+    "Country": "Bahrain",
+    "Slug": "bahrain",
+    "ISO2": "BH"
+  },
+  {
+    "Country": "Belgium",
+    "Slug": "belgium",
+    "ISO2": "BE"
+  },
+  {
+    "Country": "Costa Rica",
+    "Slug": "costa-rica",
+    "ISO2": "CR"
+  },
+  {
+    "Country": "Ethiopia",
+    "Slug": "ethiopia",
+    "ISO2": "ET"
+  },
+  {
+    "Country": "French Polynesia",
+    "Slug": "french-polynesia",
+    "ISO2": "PF"
+  },
+  {
+    "Country": "Guyana",
+    "Slug": "guyana",
+    "ISO2": "GY"
+  },
+  {
+    "Country": "Sudan",
+    "Slug": "sudan",
+    "ISO2": "SD"
+  },
+  {
+    "Country": "Turkmenistan",
+    "Slug": "turkmenistan",
+    "ISO2": "TM"
+  }
+  ]
