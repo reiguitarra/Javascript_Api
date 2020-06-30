@@ -29,33 +29,43 @@
                 
                 var data = new google.visualization.DataTable();
 
-                //dados.addColumn('string', 'Pais');
-
-               // dados.addRows(qtdPais);
-                
-
-              //  console.log(qtdPais);   
-               /* for(var i = 0; i < qtdPais; i++)
-                {
-
-                    //dados.setValue(i, paises['Countries'][i].Country);
-                    dados.addRows([
-                        paises['Countries'][i].Country
-
-                    ]);
-                }*/
-
-                data.addColumn('string', 'Name');
+                data.addColumn('string', 'País');
+                data.addColumn('string','Código Do País');
+                data.addColumn('number', 'Novos Casos');
+                data.addColumn('number', 'Total infectados');
+                data.addColumn('string', 'Data');
               //  data.addColumn('number', 'Salary');
                 //data.addColumn('boolean', 'Full Time Employee');
-                    data.addRows([
-                    [paises['Countries'][0].Country]
-                    ]);
-                
+                   for (var i = 0; i < paises['Countries'].length; i++)
+                   {
+                        data.addRows([
+                        [
+                            paises['Countries'][i].Country,
+                            paises['Countries'][i].CountryCode,
+                            paises['Countries'][i].NewConfirmed,
+                            paises['Countries'][i].TotalConfirmed,
+                            paises['Countries'][i].Date
+
+
+                        ]
+
+                        ]);
+                    
+                   }
+                   
                 var myDve = document.getElementById('mdiv');
                 var tabela = new google.visualization.Table(myDve);
+                var corNumber = new google.visualization.ColorFormat();
+                   corNumber.addRange(-20000, 0, 'white', 'orange');
+                   corNumber.addRange(20000, null, 'red', '#33ff33');
 
-                tabela.draw(data, {showRowNumbers : true, width: '100%', height: '100%'});
+                var formato = new google.visualization.NumberFormat(
+                    {negativeColor: 'red', negativeParens: true});
+
+                    formato.format(data, 3);
+                    corNumber.format(data, 3);
+                    
+                tabela.draw(data, {allowHtml: true, showRowNumbers : true, width: '100%', height: '100%'});
 
             }
 
