@@ -64,7 +64,7 @@
 
                     formato.format(data, 3);
                     corNumber.format(data, 3);
-                    
+
                 tabela.draw(data, {allowHtml: true, showRowNumbers : true, width: '100%', height: '100%'});
 
             }
